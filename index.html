@@ -1,23 +1,16 @@
-<head></head>
-<body>
-  <script src=”https://planitcanada.force.com/PlanitTechSchedule/lightning/lightning.out.js”></script>;
+<script type='text/javascript' src=”https://planitcanada.force.com/PlanitTechSchedule”></script>
 <script>
-$Lightning.use(“runtime_appointmentbooking:lightningOutGuest”, // name of the Lightning app
+$Lightning.use('runtime_appointmentbooking:lightningOutGuest', // name of the Lightning app
 function() {
 $Lightning.createComponent(
-“lightning:flow”, // top-level component of your app
+'lightning:flow', // top-level component of your app
 { }, // attributes to set on the component when created
-“lightningLocator”, // the DOM location to insert the component
+'lightningLocator', // the DOM location to insert the component
 function(cmp) {
-console.log(‘Hi from callback’);// callback when component is created and active on the page
-cmp.startFlow(‘runtime_appointmentbooking__Guest_Flow‘);
+console.log("Hi from callback");// callback when component is created and active on the page
+cmp.startFlow(Site_Site_Appoitment_HCP_Filter);
 }
 );
-}, ‘https://planitcanada.force.com/PlanitTechSchedule'; // Community endpoint
+}, "https://planitcanada.force.com/PlanitTechSchedule/" // Community endpoint
 );
 </script>
-
-<div id=”lightningLocator”>
-<p>Lightning Component mentioned in the Script is invoked from here test</p>
-</div>
-</body>
