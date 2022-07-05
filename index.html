@@ -1,4 +1,6 @@
-<script type='text/javascript' src=”https://planitcanada.force.com/PlanitTechSchedule”></script>
+<head></head>
+<body>
+<script type='text/javascript' src=”https://planitcanada.force.com/PlanitTechSchedule/lightning/lightning.out.js”></script>
 <script>
 $Lightning.use('runtime_appointmentbooking:lightningOutGuest', // name of the Lightning app
 function() {
@@ -14,3 +16,8 @@ cmp.startFlow(Site_Site_Appoitment_HCP_Filter);
 }, "https://planitcanada.force.com/PlanitTechSchedule/" // Community endpoint
 );
 </script>
+
+<div id=”lightningLocator”>
+<p>Lightning Component mentioned in the Script is invoked from here</p>
+</div>
+</body>
