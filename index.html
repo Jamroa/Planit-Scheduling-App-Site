@@ -1,23 +1,23 @@
-<head></head>
-<body>
-<script type='text/javascript' src=”https://planitcanada.force.com/PlanitTechSchedule/lightning/lightning.out.js”></script>
-<script>
-$Lightning.use('runtime_appointmentbooking:lightningOutGuest', // name of the Lightning app
-function() {
-$Lightning.createComponent(
-'lightning:flow', // top-level component of your app
-{ }, // attributes to set on the component when created
-'lightningLocator', // the DOM location to insert the component
-function(cmp) {
-console.log("Hi from callback");// callback when component is created and active on the page
-cmp.startFlow(Site_Site_Appoitment_HCP_Filter);
-}
-);
-}, "https://planitcanada.force.com/PlanitTechSchedule/" // Community endpoint
-);
-</script>
+<div id='container' style='height:100px;background:red;' onload='init()'></div>
+<script type='text/javascript' src="https://planitcanada.force.com/lightning/lightning.out.js"></script>
+<script type='text/javascript'>
+console.log("start");
+init()
 
-<div id=”lightningLocator”>
-<p>Lightning Component mentioned in the Script is invoked from here</p>
-</div>
-</body>
+function init(){
+	console.log("start1");
+    $Lightning.use("c:embeddedFlowApp",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+			console.log("start2");
+            $Lightning.createComponent(
+                "c:embeddedFlow", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "container",   // the DOM location to insert the component
+                function(cmp) { // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://planitcanada.force.com/'  // Experience Cloud site endpoint
+    );
+}
+</script>
