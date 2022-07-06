@@ -5,12 +5,9 @@
 <div id='container' ></div>
 <script type='text/javascript' src="https://planitcanada.force.com/PlanitTechSchedule/lightning/lightning.out.js"></script>
 <script type='text/javascript'>
-console.log("start Script");
 function init(){
-console.log("start1");
     $Lightning.use("c:embeddedFlowApp",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
-			console.log("start2");
             $Lightning.createComponent(
                 "c:embeddedFlow", // top-level component of your app
                 { },                  // attributes to set on the component when created
